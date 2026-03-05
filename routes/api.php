@@ -6,7 +6,7 @@ use App\Http\Controllers\Api\SectionController;
 use App\Http\Controllers\Api\EnrollmentController;
 use App\Http\Controllers\Api\StudentController;
 
-Route::prefix('api')->group(function () {
+
     // Manage courses
     Route::post('/courses', [CourseController::class, 'store']);
 
@@ -24,4 +24,3 @@ Route::prefix('api')->group(function () {
 
     // Generate Transcript of Records
     Route::get('/students/{id}/transcript', [StudentController::class, 'transcript']);
-});
